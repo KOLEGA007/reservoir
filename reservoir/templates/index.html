@@ -26,19 +26,19 @@
                 {% csrf_token %}
                 <div class="form-group">
                   <label for="inputName">Jméno</label>
-                  <input type="text" class="form-control" name="name" id="inputName" aria-describedby="emailHelp" placeholder="Zadejte prosím své jméno">
+                  <input type="text" class="form-control" name="name" id="inputName" placeholder="Zadejte prosím své jméno">
                 </div>
                 <div class="form-group">
                   <label for="inputEmail">E-mailová adresa</label>
-                  <input type="email" class="form-control" name="email" id="inputEmail" aria-describedby="emailHelp" placeholder="Zadejte svůj email">
+                  <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Zadejte svůj email">
                 </div>
                 <div class="form-group">
                   <label for="inputPhone">Telefon</label>
-                  <input type="phone" class="form-control" name="phone" id="inputPhone" placeholder="Zadejte prosím své telefonní číslo">
+                  <input type="tel" class="form-control" name="phone" id="inputPhone" placeholder="Zadejte prosím své telefonní číslo">
                 </div>
                 <div class="form-group">
                   <label for="inputBarSeats">Lístky na bar</label>
-                  <input type="text" onkeyup="updatePrice()" onkeypress='return [46, 8, 9, 27, 13, 110, 190].includes(event.keyCode) || (event.keyCode >= 35 && event.keyCode <= 39) || (event.charCode >= 48 && event.charCode <= 57)' min="0" max="100" class="form-control" name="bar_seats" id="inputBarSeats" placeholder="Lístky na bar" value=0>
+                  <input type="number" onkeyup="updatePrice()" onkeypress='return [46, 8, 9, 27, 13, 110, 190].includes(event.keyCode) || (event.keyCode >= 35 && event.keyCode <= 39) || (event.charCode >= 48 && event.charCode <= 57)' min="0" max="100" class="form-control" name="bar_seats" id="inputBarSeats" placeholder="Lístky na bar" value=0>
                 </div>
                 <i class="fa fa-ticket"></i> (<span id="price"></span> Kč) × <span id="tickets_number_shopping">0</span> = <span class="text-success"><span id="full_price">10000</span> Kč</span>
                 <div id="places">
@@ -54,7 +54,7 @@
     </form>
     <div class="container">
       <header>
-          <img class="logo" src="{% static "frontend/assets/logo-simple.png" %}">
+          <img class="logo" src="{% static "frontend/assets/logo-simple.png" %}" alt="Logo plesu">
           <div class="text">
             <h1 class="title"><strong>Farní</strong> ples 2018</h1>
             <h2 class="subtitle">Odoláte pokušení nejít?</h2>
