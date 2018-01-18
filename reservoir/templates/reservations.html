@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rezervace lístků</title>
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "frontend/assets/font-awesome.css"%}">
+    <link rel="stylesheet" href="{% static "frontend/main.css" %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+<!-- Modal -->
+  <body style="background-image: url({% static "frontend/assets/background.png" %})">
+    <div class="container">
+      <header>
+          <img class="logo" src="{% static "frontend/assets/logo-simple.png" %}">
+          <div class="text">
+            <h1 class="title"><strong>Farní</strong> ples 2018</h1>
+            <h2 class="subtitle">Odoláte pokušení nejít?</h2>
+          </div>
+      </header>
+      <div class="jumbotron">
+        <h2>Seznam stolů</h2>
+      </div>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Číslo stolu</th>
+            <th scope="col">Rezervace</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for place in object_list %}
+          <tr class="bg-secondary">
+            <td class="border-black">
+              {{place.table}}
+            </td>
+            <td class="border-black">
+              {% if place.reservation is not None %}
+                {{place.reservation.name}} - {{place.reservation.state}}
+              {% else %}
+                Žádná rezervace
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>

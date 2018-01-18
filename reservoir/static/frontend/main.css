@@ -1,0 +1,93 @@
+html, body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+body  {
+  padding: 10px;
+  background-size: 10%;
+}
+.spacer {
+  height: 0px;
+}
+#playground {
+  display: flex;
+  width: 641px;
+  margin: 1em auto;
+  overflow: auto;
+}
+#playground canvas {
+  margin: 0 auto;
+  display: block;
+}
+header {
+  overflow: auto;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+header .logo {
+  height: 160px;
+  margin-right: -3em;
+}
+header .title {
+  color: #902149;
+  z-index: 1;
+}
+header {
+  text-align: center;
+}
+
+header .subtitle {
+    font-family: 'Courgette', cursive;
+    font-style: italic;
+    z-index: 1;
+}
+footer {
+  position: fixed;
+  bottom: 3px;
+  width: calc(100% - 20px);
+}
+.cart {
+  line-height: 1.5em;
+  font-size: 1.5em;
+  overflow: auto;
+}
+.scrolling {
+
+}
+@media screen and (max-width: 768px) {
+  .cart .float-left, .cart .float-right {
+    float: none !important;
+  }
+
+  .cart {
+    text-align: center;
+    line-height: 1.6em;
+  }
+
+  .cart .btn {
+    display: block;
+    width: 100%;
+  }
+
+  .cart .ml-2 {
+    margin-left: 0 !important;
+  }
+
+  .spacer {
+    height: 50px;
+  }
+}
+.card-title-icon {
+  text-align: center;
+}
+
+.bg-farni {
+    background-color: #902149;
+}
+
+.desc.top {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}

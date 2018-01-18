@@ -1,0 +1,33 @@
+html, body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+body  {
+  padding: 10px;
+  padding-bottom: 80px;
+  background-size: 10%;
+}
+header {
+  overflow: auto;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+header .logo {
+  height: 160px;
+  margin-right: -3em;
+}
+header .title {
+  color: #902149;
+  z-index: 1;
+}
+header {
+  text-align: center;
+}
+
+header .subtitle {
+    font-family: 'Courgette', cursive;
+    font-style: italic;
+    z-index: 1;
+}
